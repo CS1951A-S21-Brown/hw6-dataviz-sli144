@@ -16,13 +16,80 @@
     <div class="row">
         <div class="col-lg-6">
             <div id="graph1"></div>
-            <div id="graph2"></div><br/>
+            <div id="graph2"></div>
+            <button id = "Total">Total</button>
+            <button id = "NA">North America</button>
+            <button id = "EU">Europe</button>
+            <button id = "JP">Japan</button>
+            <button id = "Other">Other</button>
+            <br/>
         </div>
         <div class="col-lg-6">
+            <select id = "select_bt"></select>
             <div id="graph3"></div>
         </div>
     </div>
     <!--Feel free to add more JavaScript files as needed-->
     <script type="text/javascript" src="main.js"></script>
+    <br>
+        <h4 style = "margin-left: 20px;">Written portion:</h4>
+    <p class = "q1"> 1. MY Dashboard uses two barplots (one static and one interactive) and one bar chart to describe the data. </p>
+        <p>Q1: For the best selling games for all times, I used static barchart to represent the total global sale for all the games draw out 
+        the best 10 of them. 
+        The result of graph 1 shows that the best 3 selling games of all times are "Wii Sports", "Super Mario Brothers", and "Mario Kart Wii".</p>
+        <p>Q2: I represented the breakdown in each category by region in a pie chart. 
+            There are three buttons for each three areas (North Amrica, Europe, and Japan) and one button for global total sale and another one for 
+            others. I added the tooltip here with a mouseover hover function so that when the mouse touches the specific part of the pie chart, 
+            the tooltip will show the name of the genre and also it's portion within the region. My finding is that: for North America and Europe,
+            the most popular genre of the game is "Action", which contsists 20% of regional sales, whereas in Japan, the most populat game genre is "Role-Playing"
+            which contsists almost 30% of the regional sale.  </p>
+        <p>Q3: I used bar plot again because it gives out the most direct information. In this graph, I also added a select drop down button which 
+            allow users to select from all 12 kinds of categories. I decide the measure the publisher by their total sale in a genre, because 
+            higher total sales are likely to indicate the capability of the publisher (they can be very experienced i.e. old in publishing certain genra
+            of games or they can be very successful at only a few games). We can see clearly the total_sales of each publisher in each genre and decide 
+            which publisher are better. For example, "Nintendo" is the best publisher for puzzle game, it has a way higher total sale than others, and it's also
+            the best for Strategy, Adventure, Misc, Platform, Role-Playing.
+          </p>
+
+    <p> 2. 3 reasons why D3 is helpful: (1) It allows the users to interact with the graph to see what happens with different data sets.
+        Users can change data set by clicking on buttons or selecting options which and the same graph wil modify accordingly to the new data,
+        which gives the user a direct comparison. (2) D3 enables many types of graphs. Not only the basic bar/pie chart, but also violin, density,
+        correlation, spider/radar and even geographic map. All these helps to analyze one dataset from more perspectives and dimentions, so
+        the user can make the most out of the informaiton from the data. (3) D3 also allows us to perform statistical tests.
+        It can be helpful when combined with statistics, such as t test and regressions with scatter plot. When calculating the regression, for example
+        the best fit-line and the data can be compared side by side.</p>
+
+    <p>
+        3. 3 reasons why D3 may not be the best visualization tool: (1) D3 requires the users to know what to do with the data. As opposed to
+        excel or STATA, which does the chart and regression automatically for the users when the data is inputed, D3 requires the user to hand draw
+        the rectangles for the bar chart and the circle for pie chart. So it can be confusing when the user don't know what to do with the data. 
+        (2) There aren't many built-in stats tests portion for D3. So it is not easy to calculate the statistical values such as "R^2" or perform
+        a t-test/f-test. (3) Because D3 works more with the DOM and on decoration of the graphs, less with the data itself, users may not get a deep
+        understanding of the data and how it is visualized. 
+    </p>
+
+    <p>
+        4.Evaluate the accessbility. Overall, my dashboard is easy to read and conveys sufficient information. According to the reading 
+        "A comprehensive guide to Acessible Data Visualization", I've made sure that my graph doesn't include colors that are not friendly to 
+        color blind people (I avoided uising green and red and blue and for most part used purple). Secondly, I've made sure that all my graphs
+        have labels for both axis and a legend for pie-chart, theyfore others can know what I was talking about. Thirdly, in order to make the graphs
+        clearer, i've added paddings in all of them. This separaetes each data groups clearer (especially in pir chart). Lastly, to be more 
+        assisstive, I used a select drop down button instead of manual string input box for users to select the genere they want to search 
+        for the best publisher and also buttons for users to select which regional breakdown they want to see(just in case they don'e know 
+        how many regions there are). All these may be helpful for color-blind users, and usrs who do not have many knowledge on the data, 
+        because the button and selection options are more convenient. However, it may not be accessible for people who are iliterate (doesn't 
+        know what the button means) and also who are specifially color blind to purple. Also, my pie chart is of 12 colors and maybe will cause 
+        confusions for some color-blind people. In order to improve, I can use other representation, such as density/spider graphs.
+    </p>
+    <p>
+        5. When I was implementing the pie-chart, there are in total 12 genre so the pie chart will be at least divided into 12 parts.
+        If I were to include different colors for each genre, the accessbility will very likely decrease for color-blind people if there 
+        are these many colors. However, after I looked at all the possible charts, pie chart is the most direct way to represent breakdowns 
+        of a whole. Therefore I did not change the graph. Also, I could also add the string to pie-chart directly besides the legend for better
+        redability, but I thought I can just add a tooltip so that mouseover will show the genre and percentage and it is also a good way to clearify
+        the graph
+    </p>
+
+
 </body>
 </html>
